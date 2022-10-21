@@ -1,4 +1,4 @@
-from Oopsdemo import Calculator
+from OopsDemo import Calculator
 
 
 class ChildImpl(Calculator):

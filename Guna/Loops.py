@@ -1,34 +1,47 @@
-my_name = "Gunaseelan"
-a = 9
-if a > 10 :
-    print("greater")
+
+greeting = "Good Morning"
+a = 4
+
+if a > 2:
+    print(" Condition matches")
+    print("second line")
 else:
-    print("smaller")
-print("interger ends here")
-if my_name == "Gunaseelan":
-    print("Zero")
-else:
-    print("lot more to learn")
-print("str ends here")
+    print("condition do not match")
 
-# for loop
+print("if else condition code is completed")
 
-obj = [2,4,6,8]
-for i in obj :
-    print(i+2)
-addition = 0
-for j in range(2,8):
-    addition = addition + j
-    print(addition)
 
-# while loop
+#for loop
 
-a = 10
-while a > 1:
-    a = a - 1
-    if a == 2:
-        break
+obj= [2, 3, 5, 7, 9]
+for i in obj:
+    print(i*2)
 
-    print(a)
+
+# sum of First Natural numbers 1+2+3+4+5 = 15
+#range(i,j) -> i to j-1
+summation = 0
+for j in range(1, 6):
+    summation = summation + j
+print(summation)
+
+print("*******************************")
+for k in range(1, 10, 5):
+    print(k)
+    print("**************SKIPPING FIRST INDEX*****************")
+for m in range(10):
+    print(m)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
