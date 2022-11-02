@@ -1,4 +1,7 @@
+import time
+
 from selenium import webdriver
+from selenium.webdriver import Keys
 
 #chrome driver
 from selenium.webdriver.chrome.service import Service
@@ -16,7 +19,12 @@ driver.find_element(By.XPATH,"(//input[@class='_2IX_2- VJZDxU'])").send_keys("77
 driver.find_element(By.XPATH, "(//input[@class='_2IX_2- _3mctLh VJZDxU'])").send_keys("Flipkartlogin")
 #driver.close()
 driver.find_element(By.XPATH, "(//button[@class='_2KpZ6l _2HKlqd _3AWRsL'])").click()
-driver.find_element(By.XPATH, "(//input[@class='_3704LK'])").send_keys("Realme x7")
-driver.find_element(By.XPATH, "(//input[@class='_3704LK'])").send_keys("ENTER")
+#driver.find_element(By.XPATH, "(//input[@class='_3704LK'])").send_keys("Realme")
+#driver.find_element(By.XPATH, "(//input[@class='_3704LK'])").clear
+driver.find_element(By.XPATH, "//input[@class='_3704LK']").send_keys("Realme x7")
+driver.find_element(By.XPATH, "(//button[@type='submit'])").send_keys(Keys.ENTER)
+#time.sleep(10)
+#driver.sleep(30)
+#driver.find_element(By.XPATH, "(//button[@type='submit'])").click()
 # driver.refresh();
 # driver.find_element(By.XPATH, "(//button[@class='L0Z3Pu'])").click()
