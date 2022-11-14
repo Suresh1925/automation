@@ -10,7 +10,7 @@ service_obj = Service("C:\\Users\Praveen\PycharmProjects\PraveenProject\driver\c
 driver = webdriver.Chrome(service=service_obj)
 driver.implicitly_wait(2)
 driver.maximize_window()
-# 5 seconds is max time out.. 2 seconds (3 seconds save)
+
 driver.get("https://the-internet.herokuapp.com/windows")
 driver.find_element(By.LINK_TEXT,"Click Here").click()
 windowsOpen = driver.window_handles
@@ -19,3 +19,4 @@ print(driver.find_element(By.TAG_NAME, "h3").text)
 driver.close()
 driver.switch_to.window(windowsOpen[0])
 assert "opening a new window" == driver.find_element(By.TAG_NAME, "h3").text
+print('thanks')
