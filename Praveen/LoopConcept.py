@@ -3,7 +3,7 @@
 a = 4
 
 if a > 2:
-    print(" Condition matches")
+    print("Condition matches")
     print("second line")
 else:
     print("condition do not match")
@@ -23,7 +23,6 @@ for i in obj:
 a = 4
 while a>1:
     if a==4:
-       # break
-        print("if loop")
+       break
     print("while loop")
 print("true")

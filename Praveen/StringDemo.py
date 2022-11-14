@@ -10,9 +10,7 @@ print(str+str1)   # concatenation
 
 print(str3 in str)  # substring check
 
-var = str.split(".")
-print(var)
-print(var[0])
+
 str4 = " great "
 print(str4.strip())
 print(str4.lstrip())
