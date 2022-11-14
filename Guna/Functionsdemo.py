@@ -1,9 +1,27 @@
-def getdata():
-    print("Good afternoon")
+#In Python, function is a group of related statements that perform a specific task.
+#Function Declaration
 
-def addnumbers(a,b):
-    print(a+b)
 
-getdata()
-addnumbers(5,4)
+def GreetMe(name):
+    print("Good Morning"+name)
+    #Function Call
+
+
+def AddIntegers(a, b):
+    return a+b
+
+
+GreetMe("Rahul Shetty")
+
+print(AddIntegers(2, 3))
+
+
+
+
+
+
+
+
+
+
 
