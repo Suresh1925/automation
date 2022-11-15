@@ -1,7 +1,7 @@
-class Calculator:
+class Calculator:   #its an blueprint to create an object
     num = 100
 
-    def getData(self):
+    def getData(self): #to access the method
         print("My name is praveen")
 
 

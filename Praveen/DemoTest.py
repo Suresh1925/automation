@@ -22,5 +22,6 @@ print(value)
 
 dict = {"a": 13, 1: "DOB"}  # Key value pair
 print(dict["a"])
+print(dict[1])
 
 

@@ -26,7 +26,7 @@ driver.find_element(By.XPATH,"//img[@alt='Cart']").click()
 driver.find_element(By.XPATH,"//button[text()='PROCEED TO CHECKOUT']").click()
 driver.find_element(By.CLASS_NAME , "promoCode").send_keys("rahulshettyacademy")
 driver.find_element(By.XPATH, "//button[@class = 'promoBtn']").click()
-print(driver.find_element(By.CSS_SELECTOR ,"span.promoInfo").text)
+
 
 
 
