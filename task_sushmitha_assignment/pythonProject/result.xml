@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="2" time="20.863" timestamp="2022-11-17T17:50:14.431157" hostname="DESKTOP-BPSCC2L"><testcase classname="tests.test_e2e.Test_one" name="test_logdemo" time="2.420" /><testcase classname="tests.test_e2e.Test_one" name="test_e2e[getData0]" time="17.735"><failure message="AttributeError: type object 'Confirm' has no attribute 'filterValid'">self = &lt;tests.test_e2e.Test_one object at 0x0000015AB1E78550&gt;, setup = None, getData = {'country': 'Sweden', 'suggession': 'sw', 'suggession_countries': 'Sweden\nSwitzerland'}
+
+    def test_e2e(self, setup, getData):
+        log = self.test_logdemo()
+        homePage = HomePage(self.driver)
+        checkoutPage = homePage.shopItems()
+        products = checkoutPage.getproductTitle()
+    
+        for product in products:
+            productName = product.find_element(By.XPATH, 'div/h4/a').text
+            log.info(productName)
+            if productName == "Blackberry":
+                product.find_element(By.XPATH, 'div/button').click()
+        checkoutPage.clickprimaryButton().click()
+        confirmPage = checkoutPage.clicksucessButton()
+&gt;       confirmPage.getfilterValid().send_keys(getData["suggession"])
+
+tests\test_e2e.py:30: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;pageObjects.confirm.Confirm object at 0x0000015AB1E6B040&gt;
+
+    def getfilterValid(self):
+&gt;       return self.driver.find_element(*Confirm.filterValid)
+E       AttributeError: type object 'Confirm' has no attribute 'filterValid'
+
+pageObjects\confirm.py:24: AttributeError</failure></testcase></testsuite></testsuites>
