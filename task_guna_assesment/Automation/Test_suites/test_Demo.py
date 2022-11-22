@@ -7,13 +7,13 @@ from selenium.webdriver.support.wait import WebDriverWait
 from datetime import datetime
 now = datetime.now()
 
-with open("../test_data/details.json") as input:    #Loading testdata
+with open("./test_data/details.json") as input:    #Loading testdata
     Input_Object = json.load(input)
     input.close()
 
 
 
-service_object = Service("C:/Users/Admin/PycharmProjects/Automation/Driver/chromedriver.exe")
+service_object = Service("./Driver/chromedriver.exe")
 driver = webdriver.Chrome(service=service_object)
 driver.maximize_window()
 driver.get(Input_Object["url"])
@@ -63,6 +63,7 @@ def test_drop_down():
                 assert  Address == Input_Object["address"]
         except Exception as e:
                 print(e)
+
 
 
 def test_logout():
