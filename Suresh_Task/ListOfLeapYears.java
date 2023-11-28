@@ -12,7 +12,7 @@ public class ListOfLeapYears {
             System.out.print("Enter the last year: ");
             int last = scanner.nextInt();
 
-            System.out.println("Leap years between 1975 and 2015:");
+            System.out.println("Leap years between 1992 and 2010:");
             for (int year = first; year <= last; year++) {
                 if (Year.of(year).isLeap()) {
                     System.out.println(year);
