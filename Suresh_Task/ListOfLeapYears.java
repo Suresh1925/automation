@@ -1,11 +1,23 @@
 package automation.Suresh_Task;
 
+import java.time.Year;
+import java.util.Scanner;
+
 public class ListOfLeapYears {
     public static void main(String[] args) {
-    for (int i = 2000; i < 2025; i++) {
-        if ((i % 4 == 0 && i % 100 != 0) || i % 400 == 0) {
-            System.out.printf("%4d%n", i);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Enter the first year: ");
+            int first = scanner.nextInt();
+
+            System.out.print("Enter the last year: ");
+            int last = scanner.nextInt();
+
+            System.out.println("Leap years between 1975 and 2015:");
+            for (int year = first; year <= last; year++) {
+                if (Year.of(year).isLeap()) {
+                    System.out.println(year);
+                }
+            }
         }
     }
-}
 }
