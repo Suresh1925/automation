@@ -1,14 +1,21 @@
-# Program to display calendar of the given month and year
+# Python program to check if year is a leap year or not
 
-# importing calendar module
-import calendar
+year = 2000
 
-yy = 2020  # year
-mm = 11    # month
+# To get year (integer input) from the user
+# year = int(input("Enter a year: "))
 
-# To take month and year input from the user
-# yy = int(input("Enter year: "))
-# mm = int(input("Enter month: "))
+# divided by 100 means century year (ending with 00)
+# century year divided by 400 is leap year
+if (year % 400 == 0) and (year % 100 == 0):
+    print("{0} is a leap year".format(year))
 
-# display the calendar
-print(calendar.month(yy, mm))
+# not divided by 100 means not a century year
+# year divided by 4 is a leap year
+elif (year % 4 ==0) and (year % 100 != 0):
+    print("{0} is a leap year".format(year))
+
+# if not divided by both 400 (century year) and 4 (not century year)
+# year is not leap year
+else:
+    print("{0} is not a leap year".format(year))
